@@ -19,7 +19,7 @@ class CategoryLists extends Component {
     render() {
         return (
             
-                <Paper elevation={3} style={{margin:'20px',background:'orange', height:"100px", display:"flex", flexDirection:'row', justifyContent:'space-between'}}>
+                <Paper elevation={3} style={{margin:'20px',background:'#d94711', height:"100px", display:"flex", flexDirection:'row',borderRadius:'14px', justifyContent:'space-between'}}>
                    
                     {/* <div style={{background:'blue', display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center', width:'80px'}} >
                          <LabelIcon style={{color:'white', fontSize:'3rem'}}/>

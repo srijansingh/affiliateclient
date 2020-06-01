@@ -152,7 +152,7 @@ class Drawer extends Component {
                         {username}
                         <ListItem button key="1" onClick={this.handleToggle}>
                             <ListItemIcon >
-                            <AccountCircleIcon style={{color:'orange'}} />
+                            <AccountCircleIcon style={{color:'#d94711'}} />
                             </ListItemIcon>
                             <ListItemText primary="My Account" />
                             {this.state.toggle ? <ExpandLess /> : <ExpandMore />}
@@ -163,7 +163,7 @@ class Drawer extends Component {
 
                         <ListItem button key="2" onClick={this.handleClick}>
                             <ListItemIcon >
-                                <CategoryIcon style={{color:"orange"}}/>
+                                <CategoryIcon style={{color:"#d94711"}}/>
                             </ListItemIcon>
                             <ListItemText primary="Category" />
                             {this.state.open ? <ExpandLess /> : <ExpandMore />}

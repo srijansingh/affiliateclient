@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CategoryLists from './component/categoryLists';
 import { Link } from "react-router-dom";
 import "./category.css";
-import { withStyles } from '@material-ui/core'
+import { withStyles, CircularProgress } from '@material-ui/core'
 import ProductSlider from './component/productSlider';
 import Loader from '../../component/Loader';
 
@@ -118,10 +118,8 @@ componentDidMount(){
            
                 if(this.state.isCatLoading){
                    menu = (
-                      <div className="container">
-                        <div className="row">
-                          Loading...
-                        </div>
+                      <div>
+                        <CircularProgress style={{color:'#d94711'}}/>
                       </div>
                     )
                   }
@@ -152,6 +150,7 @@ componentDidMount(){
         return (
             <div className="category">
                 <div className="explore">
+                    
                   <div className="grid">
                     {menu}
                 </div>

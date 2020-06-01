@@ -120,7 +120,7 @@ export default class SingleProduct extends Component {
             console.log("Data length" + data.length)
             return (
                 <div key={index} style={{margin:'20px'}}>
-                    <Paper elevation={2} style={{width:'200px',justifyContent:'space-around',padding:'0.5rem', textAlign:'center',alignItems:'center',display:'flex',flexDirection:'column', flexWrap:'wrap'}}>
+                    <Paper elevation={2} style={{width:'200px',borderRadius:'20px',justifyContent:'space-around',padding:'0.5rem', textAlign:'center',alignItems:'center',display:'flex',flexDirection:'column', flexWrap:'wrap'}}>
                     <div className="amazon-logo">
                             <img src={AmazonLogo} alt="Flipkart"/>
                         </div>

@@ -76,13 +76,17 @@ class CategoryProduct extends Component {
                                 <div className="flat-image">
                                     <img src={list.image} alt={list.title}/>
                                 </div>
-                                <div class="flat-details">
+                                <div className="flat-details">
                                    
                                     <span class="flat-title">{list.title.substring(0, 20)}</span>
                                     <span className="flat-brand">{list.brand.substring(0, 10)}</span>
                                     <span className="flat-rating">{list.rating}</span>
-                                    <span className="flat-price">{list.price}</span>
-                                  
+                                </div>
+                                <div className="flat-best-box">
+                                    <div className="flat-best">
+                                        <span style={{fontWeight:'bold', fontSize:'1.5rem'}}> Best Price</span>
+                                        <span style={{fontWeight:'bold', fontSize:'1.5rem',color:'#d94711'}}>{list.price}</span>
+                                    </div>
                                 </div>
                             </Paper>
                         </Link>
@@ -93,6 +97,9 @@ class CategoryProduct extends Component {
        
         return (
             <div className="flat-box">
+                <div style={{color:'#d94711',textAlign:'left'}}>
+                    <h1 style={{color:'#d94711',textAlign:'left',fontFamily:'montserrat-bold'}}>{this.props.match.params.category.toUpperCase()}</h1>
+                </div>
                 <div className="flat-container">
                     {Listing}
                 </div>

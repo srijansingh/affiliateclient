@@ -73,7 +73,7 @@ export default class Product extends Component {
 
                     <span className="single-product-price">
                         <span style={{fontWeight:'bold', fontSize:'1.5rem',padding:'0.5rem 0',marginRight:'3rem'}}> Best Price</span>
-                        <span style={{fontWeight:'bold', fontSize:'1.5rem',padding:'0.5rem 0'}}>{this.props.price}</span>
+                        <span style={{fontWeight:'bold', fontSize:'1.5rem',padding:'0.5rem 0', color:'#d94711'}}>{this.props.price}</span>
                     </span> 
 
                      <span className="single-product-price">
