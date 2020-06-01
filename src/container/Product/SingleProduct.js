@@ -3,6 +3,7 @@ import Product from './component/Product'
 import Paper from "@material-ui/core/Paper"
 import AmazonLogo from "../../util/flipkart.png"
 import "./singleproduct.css";
+import { CircularProgress } from '@material-ui/core';
 
 export default class SingleProduct extends Component {
      constructor(){
@@ -116,31 +117,45 @@ export default class SingleProduct extends Component {
             }
         })
         .map((data, index) => {
-            console.log(data.title)
+            console.log("Data length" + data.length)
             return (
                 <div key={index} style={{margin:'20px'}}>
-                    <Paper elevation={2} style={{width:'200px',padding:'0.5rem',display:'flex', flexWrap:'wrap'}}>
-                        
-                        <div style={{fontSize:'15px'}}>{data.title}</div>
-                        <div style={{fontSize:'20px',color:'blue', fontWeight:'bold'}}>{data.price}</div>
-                        <div className="amazon-logo">
+                    <Paper elevation={2} style={{width:'200px',justifyContent:'space-around',padding:'0.5rem', textAlign:'center',alignItems:'center',display:'flex',flexDirection:'column', flexWrap:'wrap'}}>
+                    <div className="amazon-logo">
                             <img src={AmazonLogo} alt="Flipkart"/>
                         </div>
+                        
+                        <div style={{fontSize:'20px',color:'blue', fontWeight:'bold'}}>{data.price}</div>
+                        <div style={{fontSize:'15px', padding:'0.3rem'}}>{data.title}</div>
                     </Paper>
                 </div>
             )
         })
 
-
-
-       
+        let other;
+        if(item.length < 1){
+            other = (
+                <Paper elevation="3"  style={{display:'flex',width:'300px',padding:'2rem 3rem', flexDirection:'column',justifyContent:'space-around',alignItems:'center'}}> No other sellers available</Paper>
+            )
+        }
+        else{
+            other = (
+            item
+            )
+        }
 
         
 
-       
+        let product;
 
-        return (
-            <div>
+        if(this.state.isLoading){
+            product = (
+                <div><CircularProgress style={{color:'orange'}} /></div>
+            )
+        }
+        else{
+            product = (
+                <div className="description-container">
                     <Product  
                         title={this.state.title}
                         brand = {this.state.brand}
@@ -153,11 +168,25 @@ export default class SingleProduct extends Component {
 
 
                     />
-                   <div style={{display:'flex', flexDirection:'row',justifyContent:'space-around', marginTop:'2rem'}}>
+                   <div style={{display:'flex', flexDirection:'column',justifyContent:'space-around',alignItems:'center', marginTop:'2rem'}}>
+                       <h1>Other Sellers</h1>
                         <div style={{display:'flex',flexWrap:'wrap'}}>
-                            {item}
+                            {other}
                         </div>
                    </div>
+               </div>
+            )
+        }
+
+       
+
+        
+
+       
+
+        return (
+            <div className="description-box">
+                {product}
                </div>
         )
     }

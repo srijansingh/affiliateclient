@@ -83,7 +83,7 @@ export default function SearchAppBar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" style={{background:'blue'}}>
+      <AppBar position="fixed" style={{background:'orange'}}>
         <Toolbar>
           <IconButton
             edge="start"

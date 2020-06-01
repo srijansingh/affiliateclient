@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Loader from "../../component/Loader";
 import Paper from "@material-ui/core/Paper";
-
+import "./CategoryProduct.css"
 class CategoryProduct extends Component {
     constructor(){
         super()
@@ -72,16 +72,17 @@ class CategoryProduct extends Component {
                 Listing = this.state.product.map((list, index) => {
                     return (
                         <Link key={index} to={"/cat/product/"+ list._id} style={{textDecoration:'none'}}>
-                            <Paper elevation={2} className="product-item">
-                                <div className="image">
+                            <Paper elevation={2} className="flat-product">
+                                <div className="flat-image">
                                     <img src={list.image} alt={list.title}/>
                                 </div>
-                                <div class="details">
-                                    <span className="brand">{list.brand.substring(0, 10)}</span>
-                                    <span class="title">{list.title.substring(0, 20)}</span>
-                                    <span className="rating">{list.rating}</span>
-                                    <span className="price">{list.price}</span>
-                                    <span className="soldby">Sold by Amazon</span>
+                                <div class="flat-details">
+                                   
+                                    <span class="flat-title">{list.title.substring(0, 20)}</span>
+                                    <span className="flat-brand">{list.brand.substring(0, 10)}</span>
+                                    <span className="flat-rating">{list.rating}</span>
+                                    <span className="flat-price">{list.price}</span>
+                                  
                                 </div>
                             </Paper>
                         </Link>
@@ -91,8 +92,10 @@ class CategoryProduct extends Component {
         
        
         return (
-            <div style={{marginTop:'20px', display:'flex',flexWrap:'wrap', padding:'0.5rem 0', justifyContent:'center'}}>
-               {Listing}
+            <div className="flat-box">
+                <div className="flat-container">
+                    {Listing}
+                </div>
             </div>
         )
     }

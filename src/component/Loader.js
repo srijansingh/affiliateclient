@@ -20,12 +20,11 @@ export default class Loader extends Component {
         </Paper>
         )
         return (
-            <div style={{marginTop:'20px', display:'flex',flexWrap:'wrap', padding:'0.5rem 0', justifyContent:'center'}}>
+            <div className="l-container">
                {Loader}
                 {Loader}
                 {Loader}
-                {Loader}
-                 {Loader}
+                
             </div>
         )
     }

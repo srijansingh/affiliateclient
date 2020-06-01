@@ -63,7 +63,7 @@ const styles = (theme) => ({
                    
                      <div style={{display:'flex', padding:'0.5rem 1rem', height:'2rem', borderBottom:'1px solid #e6e6e6', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
                          <div style={{fontSize:'1rem', fontWeight:'bold'}} >Mysastaprice</div>
-                         <div onClick={this.props.signup}>Close</div>
+                         <div onClick={this.props.signup} style={{cursor:'pointer'}}>Close</div>
                      </div>
                      <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-around', alignItem:'center'}}> 
                      <div className={classes.paper}>
@@ -127,7 +127,7 @@ const styles = (theme) => ({
                                 color="primary"
                                 className={classes.submit}
                                 disabled = {this.props.loading ? true : false}
-                                style={{backgroundColor:'blue' }}
+                                style={{backgroundColor:'orange' }}
                             >
                             {this.props.loading ? <CircularProgress /> : 'Signup' }
                             </Button>

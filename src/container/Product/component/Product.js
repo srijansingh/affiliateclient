@@ -65,19 +65,28 @@ export default class Product extends Component {
                     <span className="title">{this.props.title}</span>
                     <span className="brand">{this.props.brand}</span>
                     <span className="rating">{this.props.rating}</span>
-                    <span className="price">{this.props.price}</span>
+                   
                     <span className="description">
                         <span style={{fontWeight:'bold', fontSize:'1rem',padding:'0.5rem 0'}}>Product Description</span>
                         <span style={{fontSize:'0.8rem', lineSpacing:'10px'}}>{this.props.description}</span>
-                    </span>    
-                </div>
-                <div>
-                    <Paper elevation={2} style={{width:'200px',padding:'0.5rem',display:'flex', flexWrap:'wrap'}}>
-                        <div className="amazon-logo">
+                    </span>  
+
+                    <span className="single-product-price">
+                        <span style={{fontWeight:'bold', fontSize:'1.5rem',padding:'0.5rem 0',marginRight:'3rem'}}> Best Price</span>
+                        <span style={{fontWeight:'bold', fontSize:'1.5rem',padding:'0.5rem 0'}}>{this.props.price}</span>
+                    </span> 
+
+                     <span className="single-product-price">
+                        <span style={{fontWeight:'bold', fontSize:'1.5rem',padding:'0.5rem 0',marginRight:'3rem'}}>From</span>
+                        <div className="single-amazon-logo">
                             <img src={AmazonLogo} alt="amazon"/>
                         </div>
-                        <Button href={this.props.link} target="_blank" variant="contained" style={{background:'blue',color:'white',width:'100%'}}>Buy at {this.props.price} </Button>
-                    </Paper>
+                    </span>  
+                </div>
+                <div>
+                    
+                        
+                       
                 </div>
             </div>
           

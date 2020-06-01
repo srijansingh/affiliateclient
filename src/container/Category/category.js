@@ -152,15 +152,14 @@ componentDidMount(){
         return (
             <div className="category">
                 <div className="explore">
-                  {/* <span style={{padding:'0.5rem 1.5rem',fontSize:'1.5rem'}}>Category</span> */}
-                  <div style={{marginTop:'20px', display:'flex',flexWrap:'wrap', padding:'0.5rem', justifyContent:'space-around'}}>
+                  <div className="grid">
                     {menu}
                 </div>
 
-                {/* <span style={{padding:'0.5rem 1.5rem',fontSize:'1.5rem'}}>Shirts</span> */}
+                {/* <span style={{padding:'0.5rem 1.5rem',fontSize:'1.5rem'}}>Shirts</span>
                   <div style={{marginTop:'20px', display:'flex',flexWrap:'wrap', padding:'0.5rem 0', justifyContent:'center'}}>
                    {Listing}
-                </div>
+                </div> */}
                 </div>
             </div>
         )
