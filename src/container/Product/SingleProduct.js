@@ -52,7 +52,7 @@ export default class SingleProduct extends Component {
                     price:response.post.price,
                     description:response.post.description,
                     image:response.post.image,
-                    link:response.post.link,
+                    link:response.post.link.split('=')[0] + '=as_li_tl&tag=mysastaprice-21',
                     searchItem:response.post.title.substring(0,25),
 
                     isLoading:false
