@@ -18,7 +18,7 @@ class CategoryProduct extends Component {
             isLoading : true
         })
 
-        fetch('http://localhost:8080/user/category/'+this.props.match.params.category, {
+        fetch('https://warm-scrubland-66696.herokuapp.com/user/category/'+this.props.match.params.category, {
             method: "GET",
             headers: {
                 "Accept": "application/json",

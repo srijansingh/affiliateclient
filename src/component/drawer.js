@@ -58,7 +58,7 @@ class Drawer extends Component {
         })
 
 
-        fetch('http://localhost:8080/user/category', {
+        fetch('https://warm-scrubland-66696.herokuapp.com/user/category', {
                 method: "GET",
                 headers: {
                     "Accept": "application/json",

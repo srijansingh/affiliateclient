@@ -80,7 +80,7 @@ class App extends Component {
   loginHandler = (event, authData) => {
     event.preventDefault();
     this.setState({ authLoading: true });
-    fetch('http://localhost:8080/user/login', {
+    fetch('https://warm-scrubland-66696.herokuapp.com/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -157,7 +157,7 @@ class App extends Component {
   signupHandler = (event, data) => {
     event.preventDefault();
     this.setState({ authLoading: true });
-    fetch('http://localhost:8080/user/signup', {
+    fetch('https://warm-scrubland-66696.herokuapp.com/user/signup', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

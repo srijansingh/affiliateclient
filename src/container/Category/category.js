@@ -32,7 +32,7 @@ componentDidMount(){
     });
 
 
-    fetch('http://localhost:8080/user/category', {
+    fetch('https://warm-scrubland-66696.herokuapp.com/user/category', {
         method: "GET",
         headers: {
             "Accept": "application/json",
@@ -60,7 +60,7 @@ componentDidMount(){
 
 
 
-    fetch('http://localhost:8080/user/active/product', {
+    fetch('https://warm-scrubland-66696.herokuapp.com/user/active/product', {
         method: "GET",
         headers: {
             "Accept": "application/json",

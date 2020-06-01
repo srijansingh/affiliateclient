@@ -30,7 +30,7 @@ export default class SingleProduct extends Component {
             isLoading : true
         })
 
-        fetch('http://localhost:8080/user/product/'+this.props.match.params._id, {
+        fetch('https://warm-scrubland-66696.herokuapp.com/user/product/'+this.props.match.params._id, {
             method: "GET",
             headers: {
                 "Accept": "application/json",
@@ -59,7 +59,7 @@ export default class SingleProduct extends Component {
             })
 
         
-            fetch('http://localhost:8080/user/compare/product', {
+            fetch('https://warm-scrubland-66696.herokuapp.com/user/compare/product', {
                     method: "POST",
                     headers: {
                         "Accept": "application/json",
