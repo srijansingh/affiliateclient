@@ -3,8 +3,7 @@ import CategoryLists from './component/categoryLists';
 import { Link } from "react-router-dom";
 import "./category.css";
 import { withStyles, CircularProgress } from '@material-ui/core'
-import ProductSlider from './component/productSlider';
-import Loader from '../../component/Loader';
+
 
 const styles = (theme) => ({
   root: {
@@ -91,27 +90,27 @@ componentDidMount(){
     render() {
        
 
-            let Listing;
-            if(this.state.isLoading){
-                Listing = (
-                      <Loader />
-                )
-            }
+            // let Listing;
+            // if(this.state.isLoading){
+            //     Listing = (
+            //           <Loader />
+            //     )
+            // }
 
-            else if(this.state.errorMessage){
-                Listing = (
-                    <div>Something is not fine</div>  
-                )
-            }
-            else if(!this.state.errorMessage){
-                Listing = this.state.product.map((list, index) => {
-                    return (
-                        <Link to={"/cat/product/"+ list._id} key={index} style={{textDecoration:'none'}}>
-                            <ProductSlider image={list.image} brand={list.brand.substring(0, 10)} title={list.title.substring(0,20)} rating={list.rating} price={list.price} />
-                        </Link>
-                    )
-                })
-            }
+            // else if(this.state.errorMessage){
+            //     Listing = (
+            //         <div>Something is not fine</div>  
+            //     )
+            // }
+            // else if(!this.state.errorMessage){
+            //     Listing = this.state.product.map((list, index) => {
+            //         return (
+            //             <Link to={"/cat/product/"+ list._id} key={index} style={{textDecoration:'none'}}>
+            //                 <ProductSlider image={list.image} brand={list.brand.substring(0, 10)} title={list.title.substring(0,20)} rating={list.rating} price={list.price} />
+            //             </Link>
+            //         )
+            //     })
+            // }
 
 
             let menu;

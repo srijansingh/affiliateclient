@@ -72,7 +72,7 @@ class CategoryProduct extends Component {
                 Listing = this.state.product.map((list, index) => {
                     return (
                         <Link key={index} to={"/cat/product/"+ list._id} style={{textDecoration:'none'}}>
-                            <Paper elevation={2} className="flat-product">
+                            <Paper  elevation={2} className="flat-product">
                                 <div className="flat-image">
                                     <img src={list.image} alt={list.title}/>
                                 </div>

@@ -119,6 +119,7 @@ class App extends Component {
         );
         localStorage.setItem('expiryDate', expiryDate.toISOString());
         this.setAutoLogout(remainingMilliseconds);
+        window.location.reload(false);
       })
       .catch(err => {
         console.log(err);
@@ -139,7 +140,7 @@ class App extends Component {
     localStorage.removeItem('userId');
     localStorage.removeItem('user');
 
-
+    window.location.reload(false);
   };
 
   setAutoLogout = milliseconds => {
@@ -198,6 +199,7 @@ class App extends Component {
         );
         localStorage.setItem('expiryDate', expiryDate.toISOString());
         this.setAutoLogout(remainingMilliseconds);
+        window.location.reload(false);
       })
       .catch(err => {
         console.log(err);
@@ -208,6 +210,9 @@ class App extends Component {
         });
       });
   }
+
+
+  
 
 
   
@@ -272,7 +277,14 @@ class App extends Component {
         <BrowserRouter>
             <div className="App">
                 <Consumer/> 
-                <SearchAppBar isAuths={this.state.isAuth} useremail={this.state.user} modal={this.handleModal}  open={this.handleOpen}/>
+                <SearchAppBar 
+                  isAuths={this.state.isAuth} 
+                  useremail={this.state.user} 
+                  signup={this.handleSignupModal}
+                  modal={this.handleModal} 
+                  logout={this.logoutHandler}  
+                  open={this.handleOpen}
+                />
                 {drawer}  
                 {modal}
                 {signup}

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
-import Paper from "@material-ui/core/Paper";
 import AmazonLogo from "../../../util/amazon.png"
 import "./product.css";
 

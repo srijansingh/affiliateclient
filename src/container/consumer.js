@@ -5,6 +5,7 @@ import Category from './Category/category';
 import { fetchCategory } from '../redux/actionCreators';
 import CategoryProduct from './Product/CategoryProduct';
 import SingleProduct from './Product/SingleProduct';
+import Search from './Search/search';
 const mapStateToProps = (state) => {
     
     return {
@@ -31,7 +32,8 @@ class Consumer extends Component {
                 <Switch> 
                     <Route exact path="/" component={() => <Category category={this.props.category} />} /> 
                     <Route exact path="/category/:category" component={CategoryProduct}/>     
-                    <Route exact path="/cat/product/:_id" component={SingleProduct}/>     
+                    <Route exact path="/cat/product/:_id" component={SingleProduct}/>    
+                    <Route exact path="/search" component={Search}/>   
                 </Switch>
             </div>
         )
