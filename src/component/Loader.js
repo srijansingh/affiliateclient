@@ -6,7 +6,7 @@ export default class Loader extends Component {
     render() {
 
         const Loader = (
-            <Paper elevation={2} className="l-product-item">
+            <div elevation={2} className="l-product-item">
             <div className="l-image">
                
             </div>
@@ -17,7 +17,7 @@ export default class Loader extends Component {
                 <span className="l-price"></span>
                 <span className="l-soldby"></span>
             </div>
-        </Paper>
+        </div>
         )
         return (
             <div className="l-container">

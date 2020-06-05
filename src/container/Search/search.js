@@ -101,7 +101,7 @@ class Search extends Component {
                 return (
                    
                     <Link key={index} to={"/cat/product/"+ list._id} style={{textDecoration:'none'}}>
-                        <Paper  elevation={2} className="flat-product">
+                        <div  elevation={2} className="flat-product">
                             <div className="flat-image">
                                 <img src={list.image} alt={list.title}/>
                             </div>
@@ -117,7 +117,7 @@ class Search extends Component {
                                     <span style={{fontWeight:'bold', fontSize:'1.5rem',color:'#d94711'}}>{list.price}</span>
                                 </div>
                             </div>
-                        </Paper>
+                        </div>
                     </Link>
                 
                 )
