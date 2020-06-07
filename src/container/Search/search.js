@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import Paper from "@material-ui/core/Paper";
 import { CircularProgress } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import { withStyles } from "@material-ui/core/styles";

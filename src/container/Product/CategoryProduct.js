@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Loader from "../../component/Loader";
-import Paper from "@material-ui/core/Paper";
 import "./CategoryProduct.css"
 class CategoryProduct extends Component {
     constructor(){

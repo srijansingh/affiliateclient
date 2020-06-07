@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Loader.css";
-import Paper from "@material-ui/core/Paper"
+
 
 export default class Loader extends Component {
     render() {
