@@ -101,7 +101,7 @@ class App extends Component {
         return res.json();
       })
       .then(resData => {
-        console.log(resData);
+        
         this.setState({
           isAuth: true,
           token: resData.token,
@@ -122,7 +122,7 @@ class App extends Component {
         window.location.reload(false);
       })
       .catch(err => {
-        console.log(err);
+       
         this.setState({
           isAuth: false,
           authLoading: false,
@@ -180,7 +180,7 @@ class App extends Component {
         return res.json();
       }) 
       .then(resData => {
-        console.log(resData);
+      
         this.setState({
           isAuth: true,
           token: resData.token,
@@ -202,7 +202,7 @@ class App extends Component {
         window.location.reload(false);
       })
       .catch(err => {
-        console.log(err);
+      
         this.setState({
           isAuth: false,
           authLoading: false,

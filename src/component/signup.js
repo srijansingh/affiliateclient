@@ -90,8 +90,6 @@ const styles = (theme) => ({
                                 label="Enter name"
                                 name="name"
                                 type="name"
-                                // autoComplete="email"
-                                // autoFocus
                                 onChange = { (event) => this.setState({name : event.target.value})}
                             />
                         <TextField
@@ -103,8 +101,6 @@ const styles = (theme) => ({
                                 label="Email Address"
                                 name="email"
                                 type="email"
-                                // autoComplete="email"
-                                // autoFocus
                                 onChange = { (event) => this.setState({email : event.target.value})}
                             />
                             

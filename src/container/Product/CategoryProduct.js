@@ -31,7 +31,7 @@ class CategoryProduct extends Component {
             }
             return res.json()
         }).then(response => {
-                console.log(response)
+               
                 this.setState({
                     product : response.post,
                     isLoading:false
@@ -77,7 +77,7 @@ class CategoryProduct extends Component {
                                 </div>
                                 <div className="flat-details">
                                    
-                                    <span class="flat-title">{list.title.substring(0, 20)}</span>
+                                    <span className="flat-title">{list.title.substring(0, 20)}</span>
                                     <span className="flat-brand">{list.brand.substring(0, 10)}</span>
                                     <span className="flat-rating">{list.rating}</span>
                                 </div>

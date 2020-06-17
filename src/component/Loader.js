@@ -10,9 +10,9 @@ export default class Loader extends Component {
             <div className="l-image">
                
             </div>
-            <div class="l-details">
+            <div className="l-details">
                 <span className="l-brand"></span>
-                <span class="l-title"></span>
+                <span className="l-title"></span>
                 <span className="l-rating"></span>
                 <span className="l-price"></span>
                 <span className="l-soldby"></span>

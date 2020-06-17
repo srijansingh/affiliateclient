@@ -13,39 +13,39 @@ export default class Product extends Component {
         }
     }
 
-    componentDidMount(){
-        this.setState({
-            isLoading : true,
+    // componentDidMount(){
+    //     this.setState({
+    //         isLoading : true,
             
-        })
-        console.log("Product"+this.props.searchItem)
-        fetch('http://localhost:8080/user/compare/product', {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-            },
-            body : JSON.stringify({searchItem:this.props.searchItem})
-        })
-        .then(res => {
-            if(res.status !==200){
-                throw new Error('Failed to fetch the product')
-            }
-            return res.json()
-        }).then(response => {
-                console.log(response)
-                this.setState({
-                    flipkart: response,
-                    isLoading:false
-            })
-        })
-        .catch(err => {
-            this.setState({
-                errorMessage:true,
-                isLoading:false
-            })
-        })
-    }
+    //     })
+    //     console.log("Product"+this.props.searchItem)
+    //     fetch('http://localhost:8080/user/compare/product', {
+    //         method: "POST",
+    //         headers: {
+    //             "Accept": "application/json",
+    //             "Content-Type": "application/json",
+    //         },
+    //         body : JSON.stringify({searchItem:this.props.searchItem})
+    //     })
+    //     .then(res => {
+    //         if(res.status !==200){
+    //             throw new Error('Failed to fetch the product')
+    //         }
+    //         return res.json()
+    //     }).then(response => {
+    //             console.log(response)
+    //             this.setState({
+    //                 flipkart: response,
+    //                 isLoading:false
+    //         })
+    //     })
+    //     .catch(err => {
+    //         this.setState({
+    //             errorMessage:true,
+    //             isLoading:false
+    //         })
+    //     })
+    // }
    
     render() {
         return (

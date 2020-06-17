@@ -50,7 +50,7 @@ class Search extends Component {
             }
             return res.json()
         }).then(response => {
-                console.log(response)
+               
                 this.setState({
                     product : response.post,
                     isLoading:false

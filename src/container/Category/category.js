@@ -44,7 +44,7 @@ componentDidMount(){
         }
         return res.json()
     }).then(response => {
-            console.log(response.category)
+            
             this.setState({
                 category : response.category,
                 isCatLoading:false
@@ -72,7 +72,7 @@ componentDidMount(){
         }
         return res.json()
     }).then(response => {
-            console.log(response)
+           
             this.setState({
                 product : response.post,
                 isLoading:false
@@ -90,27 +90,7 @@ componentDidMount(){
     render() {
        
 
-            // let Listing;
-            // if(this.state.isLoading){
-            //     Listing = (
-            //           <Loader />
-            //     )
-            // }
-
-            // else if(this.state.errorMessage){
-            //     Listing = (
-            //         <div>Something is not fine</div>  
-            //     )
-            // }
-            // else if(!this.state.errorMessage){
-            //     Listing = this.state.product.map((list, index) => {
-            //         return (
-            //             <Link to={"/cat/product/"+ list._id} key={index} style={{textDecoration:'none'}}>
-            //                 <ProductSlider image={list.image} brand={list.brand.substring(0, 10)} title={list.title.substring(0,20)} rating={list.rating} price={list.price} />
-            //             </Link>
-            //         )
-            //     })
-            // }
+            
 
 
             let menu;
@@ -153,11 +133,6 @@ componentDidMount(){
                   <div className="grid">
                     {menu}
                 </div>
-
-                {/* <span style={{padding:'0.5rem 1.5rem',fontSize:'1.5rem'}}>Shirts</span>
-                  <div style={{marginTop:'20px', display:'flex',flexWrap:'wrap', padding:'0.5rem 0', justifyContent:'center'}}>
-                   {Listing}
-                </div> */}
                 </div>
             </div>
         )

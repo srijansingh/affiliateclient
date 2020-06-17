@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Product from './component/Product'
 import Paper from "@material-ui/core/Paper"
-import AmazonLogo from "../../util/flipkart.png"
 import "./singleproduct.css";
 import { CircularProgress } from '@material-ui/core';
 
@@ -44,7 +43,7 @@ export default class SingleProduct extends Component {
             }
             return res.json()
         }).then(response => {
-                console.log(response.post)
+              
                 this.setState({
                     product : response.post,
                     title:response.post.title,
@@ -63,8 +62,7 @@ export default class SingleProduct extends Component {
             fetch('https://warm-scrubland-66696.herokuapp.com/user/compare/product', {
                     method: "POST",
                     headers: {
-                        "Accept": "application/json",
-                        "Content-Type": "application/json",
+                        'Content-Type': 'application/json'
                     },
                     body : JSON.stringify({searchItem:this.state.title.substring(0,25)})
                 })
@@ -75,7 +73,7 @@ export default class SingleProduct extends Component {
                     return res.json()
                 })
                 .then(response => {
-                    console.log(response.post)
+                   
                     this.setState({
                         flipkart: response.post,
                         isLoading:false
@@ -117,12 +115,12 @@ export default class SingleProduct extends Component {
             }
         })
         .map((data, index) => {
-            console.log("Data length" + data.length)
+          
             return (
                 <div key={index} style={{margin:'20px'}}>
                     <Paper elevation={2} style={{width:'200px',borderRadius:'20px',justifyContent:'space-around',padding:'0.5rem', textAlign:'center',alignItems:'center',display:'flex',flexDirection:'column', flexWrap:'wrap'}}>
                     <div className="amazon-logo">
-                            <img src={AmazonLogo} alt="Flipkart"/>
+                            <img src={data.image} alt="Flipkart"/>
                         </div>
                         
                         <div style={{fontSize:'20px',color:'blue', fontWeight:'bold'}}>{data.price}</div>
@@ -135,7 +133,7 @@ export default class SingleProduct extends Component {
         let other;
         if(item.length < 1){
             other = (
-                <Paper elevation="3"  style={{display:'flex',width:'300px',padding:'2rem 3rem', flexDirection:'column',justifyContent:'space-around',alignItems:'center'}}> No other sellers available</Paper>
+                <Paper   style={{display:'flex',width:'300px',padding:'2rem 3rem', flexDirection:'column',justifyContent:'space-around',alignItems:'center'}}> No other sellers available</Paper>
             )
         }
         else{
@@ -170,7 +168,7 @@ export default class SingleProduct extends Component {
                     />
                    <div style={{display:'flex', flexDirection:'column',justifyContent:'space-around',alignItems:'center', marginTop:'2rem'}}>
                        <h1>Other Sellers</h1>
-                        <div style={{display:'flex',flexWrap:'wrap'}}>
+                        <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around', alignItems:'center'}}>
                             {other}
                         </div>
                    </div>
